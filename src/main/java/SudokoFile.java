@@ -5,6 +5,7 @@ import static java.awt.Color.green;
 import static java.awt.Color.red;
 import static java.awt.Color.white;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /*
@@ -1576,7 +1577,11 @@ public class SudokoFile extends javax.swing.JFrame {
     }//GEN-LAST:event_checkActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        JFrame frame =new JFrame("Exit");
         
+        if(JOptionPane.showConfirmDialog(frame,"Confirm if you want to exit","Sudoko Puzzle",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION){
+            System.exit(0);
+        }
     }//GEN-LAST:event_exitActionPerformed
 
     private void r9c8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r9c8ActionPerformed
@@ -1998,7 +2003,13 @@ public class SudokoFile extends javax.swing.JFrame {
     }//GEN-LAST:event_select9ActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
-        ResetGame();
+        JFrame frame = new JFrame("Reset");
+        
+        if(JOptionPane.showConfirmDialog(frame,"Confirm if you want to reset the Game","Sudoko Puzzle",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION){
+            ResetGame();
+        }
+        
+        
     }//GEN-LAST:event_resetActionPerformed
 
     private void solnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solnActionPerformed
